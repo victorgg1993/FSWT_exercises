@@ -8,25 +8,163 @@
 </head>
 
 <body>
-	<nav><!--Barra superior de navegació-->
+	<nav>
+		<!--Barra superior de navegació-->
 		<ul class="navigation-bar">
-			<li id="maridaje"><a>Maridaje</a></li>
-			<li id="temporada"><a>Temporadas</a></li>
-			<li id="fact_conv"><a>Factores de conversión<a></li>
-			<li id="calc"><a>Calculadora<a></li>
+			<li class="list-navigation-bar" id="maridaje"><a>Maridaje</a></li>
+			<li class="list-navigation-bar" id="temporada"><a>Temporada de la fruta</a></li>
+			<li class="list-navigation-bar" id="fact_conv"><a>Factores de conversión<a></li>
+			<li class="list-navigation-bar" id="calc"><a>Calculadora<a></li>
 		</ul>
 	</nav>
 
 	<!-- Aqui estan tots els textos, de forma predeterminada estan apagats-->
 	<div id="div_maridaje">maridaje!</div>
-	<div id="div_temporada">temporada!</div>
+
+	<div id="div_temporada">
+		<table>
+			<tr>
+				<th>Tipo
+				<th>Temporada hemisferio norte
+				<th>Temporada hemisferio sur
+			<tr>
+				<td>Albaricoque
+				<td>Mayo-septiembre
+				<td>Diciembre-febrero
+			<tr>
+				<td>Alquejenje
+				<td>Junio-julio
+				<td>Septiembre-noviembre
+			<tr>
+				<td>Arándano
+				<td>Mayo-septiembre
+				<td>Diciembre-febrero
+			<tr>
+				<td>Castaña
+				<td>Noviembre-enero
+				<td>Abril-febrero
+			<tr>
+				<td>Cereza
+				<td>Junio-agosto
+				<td>Noviembre-enero
+			<tr>
+				<td>Ciruela
+				<td>Mayo-octubre
+				<td>Diciembre-abril
+			<tr>
+				<td>Clementina
+				<td>Noviembre-enero
+				<td>Abril-febrero
+			<tr>
+				<td>Frambuesa
+				<td>Junio-septiembre
+				<td>Diciembre-marzo
+			<tr>
+				<td>Fresa
+				<td>Junio-agosto
+				<td>Octubre-febrero
+			<tr>
+				<td>Fresa silvestre
+				<td>Agosto
+				<td>Enero-febrero
+			<tr>
+				<td>Fruta de la pasión
+				<td>Julio-marzo
+				<td>Octubre-junio
+			<tr>
+				<td>Grosella negra
+				<td>Junio-agosto
+				<td>Diciembre-febrero
+			<tr>
+				<td>Grosella roja
+				<td>Julio-agosto
+				<td>Enero-febrero
+			<tr>
+				<td>Higo
+				<td>Junio-septiembre
+				<td>Diciembre-abril
+			<tr>
+				<td>Kiwi
+				<td>Enero-agosto
+				<td>Febrero-agosto
+			<tr>
+				<td>Lichi
+				<td>Abril-junio
+				<td>Noviembre-febrero
+			<tr>
+				<td>Lima
+				<td>Semptiembre-diciembre
+				<td>Enero-agosto
+			<tr>
+				<td>Limón
+				<td>Enero-marzo
+				<td>Todo el año
+			<tr>
+				<td>Mandarina
+				<td>Noviembre-mayo
+				<td>Abril-octubre
+			<tr>
+				<td>Mango
+				<td>Marzo-septiembre
+				<td>Octubre-marzo
+			<tr>
+				<td>Manzana
+				<td>Julio-marzo
+				<td>Diciembre-septiembre
+			<tr>
+				<td>Melocotón/nectarina
+				<td>Junio-septiembre
+				<td>Diciembre-abril
+			<tr>
+				<td>Melón
+				<td>Julio-octubre
+				<td>Octubre-febrero
+			<tr>
+				<td>Membrillo
+				<td>Octubre-diciembre
+				<td>Febrero-junio
+			<tr>
+				<td>Naranja
+				<td>Enero-marzo
+				<td>Todo el año
+			<tr>
+				<td>Papaya
+				<td>Todo el año
+				<td>Todo el año
+			<tr>
+				<td>Pera
+				<td>Septiembre-enero
+				<td>Enero-junio
+			<tr>
+				<td>Piña
+				<td>Marzo-julio
+				<td>Octubre-febrero
+			<tr>
+				<td>Plátano
+				<td>Enero-diciembre
+				<td>Octubre-agosto
+			<tr>
+				<td>Pomelo
+				<td>Septiembre-noviembre
+				<td>Junio-febrero
+			<tr>
+				<td>Ruibarbo
+				<td>Enero-mayo
+				<td>Febrero-agosto
+			<tr>
+				<td>Uva
+				<td>Septiembre-octubre
+				<td>Diciembre-mayo
+		</table>
+	</div>
+
 	<div id="div_fact_conv">factores de conversión!</div>
 	<div id="div_calc">calculadora!</div>
 
 
 	<script> // S'executa un cop en l'inici, per amagar tots els textos, excepte el primer
-		document.getElementById('div_maridaje').hidden = false;
-		document.getElementById('div_temporada').hidden = true;
+		document.getElementById('div_maridaje').hidden = true;
+		document.getElementById('div_temporada').hidden = false; // treballant en aquest
 		document.getElementById('div_fact_conv').hidden = true;
 		document.getElementById('div_calc').hidden = true;
 	</script>
@@ -82,7 +220,7 @@
 				d_calc.hidden = false;
 				d_fact_conv.hidden = true;
 				d_temp.hidden = true;
-				d_mar.hidden = true;				
+				d_mar.hidden = true;
 			}
 		})
 
