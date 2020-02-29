@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<nav>
+	<nav><!--Barra superior de navegació-->
 		<ul class="navigation-bar">
 			<li id="maridaje"><a>Maridaje</a></li>
 			<li id="temporada"><a>Temporadas</a></li>
@@ -17,6 +17,76 @@
 		</ul>
 	</nav>
 
+	<!-- Aqui estan tots els textos, de forma predeterminada estan apagats-->
+	<div id="div_maridaje">maridaje!</div>
+	<div id="div_temporada">temporada!</div>
+	<div id="div_fact_conv">factores de conversión!</div>
+	<div id="div_calc">calculadora!</div>
+
+
+	<script> // S'executa un cop en l'inici, per amagar tots els textos, excepte el primer
+		document.getElementById('div_maridaje').hidden = false;
+		document.getElementById('div_temporada').hidden = true;
+		document.getElementById('div_fact_conv').hidden = true;
+		document.getElementById('div_calc').hidden = true;
+	</script>
+
+	<script> // Apuntem als div que volem mostrar / amagar
+		let d_mar = document.getElementById('div_maridaje');
+		let d_temp = document.getElementById('div_temporada');
+		let d_fact_conv = document.getElementById('div_fact_conv');
+		let d_calc = document.getElementById('div_calc');
+	</script>
+
+	<script> // Handlers dels botons
+		let doc_maridaje = document.getElementById('maridaje');
+		doc_maridaje.addEventListener('click', () => {
+			event.preventDefault();
+
+			if (d_mar.hidden === true) {
+				d_mar.hidden = false;
+				d_temp.hidden = true;
+				d_fact_conv.hidden = true;
+				d_calc.hidden = true;
+			}
+		})
+
+		let doc_temporada = document.getElementById('temporada');
+		doc_temporada.addEventListener('click', () => {
+			event.preventDefault();
+
+			if (d_temp.hidden === true) {
+				d_temp.hidden = false;
+				d_mar.hidden = true;
+				d_fact_conv.hidden = true;
+				d_calc.hidden = true;
+			}
+		})
+
+		let doc_fact_conv = document.getElementById('fact_conv');
+		doc_fact_conv.addEventListener('click', () => {
+			event.preventDefault();
+
+			if (d_fact_conv.hidden === true) {
+				d_fact_conv.hidden = false;
+				d_temp.hidden = true;
+				d_mar.hidden = true;
+				d_calc.hidden = true;
+			}
+		})
+
+		let doc_calculadora = document.getElementById('calc');
+		doc_calculadora.addEventListener('click', () => {
+			event.preventDefault();
+			if (d_calc.hidden === true) {
+				d_calc.hidden = false;
+				d_fact_conv.hidden = true;
+				d_temp.hidden = true;
+				d_mar.hidden = true;				
+			}
+		})
+
+	</script>
 </body>
 
 </html>
