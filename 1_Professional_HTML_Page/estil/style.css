@@ -5,7 +5,7 @@
     background-color: #333;
   }
   
-  li {
+.navigation-bar li {
     display: flex;
     float: left;
     color: white;
@@ -16,6 +16,6 @@
     font-size: large;
   }
   
-  li:hover {
+  .navigation-bar li:hover {
     background-color: #111;
   }
