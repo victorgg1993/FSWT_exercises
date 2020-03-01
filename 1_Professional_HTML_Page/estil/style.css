@@ -1,21 +1,57 @@
+/* Bloc navigation bar */
+
 .navigation-bar {
-    display:flex;
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-  }
-  
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+}
+
 .navigation-bar li {
-    display: flex;
-    float: left;
-    color: white;
-    align-items: center;
-    justify-content: center;
-    flex:1;
-    height: 40px;
-    font-size: large;
-  }
-  
-  .navigation-bar li:hover {
-    background-color: #111;
-  }
+  display: flex;
+  float: left;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 40px;
+  font-size: large;
+}
+
+.navigation-bar li:hover {
+  background-color: #111;
+}
+
+/* Bloc taula de la temporada de la fruita */
+
+.taula_fruita {
+  width: 100%;
+}
+
+.taula_fruita tr:nth-child(even) {
+  background-color: #d1d1d1;
+}
+
+.taula_fruita tr {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.taula_fruita th {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  flex: 1;
+  background-color: rgb(146, 145, 145);
+  color: white;
+}
+
+.taula_fruita td {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  flex: 1;
+}
