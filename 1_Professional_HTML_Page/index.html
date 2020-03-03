@@ -19,11 +19,13 @@
 	</nav>
 
 	<!-- Aqui estan tots els textos, de forma predeterminada estan apagats-->
-	<div id="div_maridaje">maridaje!</div>
+	<div id="div_maridaje">maridaje!
+
+	</div>
 
 	<div id="div_temporada">
 		<table class="taula_fruita">
-			<tr>
+			<tr class="tr_titol_taula_fruita">
 				<th>Tipo
 				<th>Temporada hemisferio norte
 				<th>Temporada hemisferio sur
@@ -158,15 +160,84 @@
 		</table>
 	</div>
 
-	<div id="div_fact_conv">factores de conversión!</div>
-	<div id="div_calc">calculadora!</div>
+	<div id="div_fact_conv">factores de conversión!
+
+	</div>
+
+	<div id="div_calc">
+		<p>Calculadora de capas de hojaldre</p>
+		<form action="/" method="vueltas">
+			<label>Vueltas dobles: <input type="number" id="vlt_dbl"></label><br>
+			<label>Vueltas simples: <input type="number" id="vlt_smp"></label><br>
+			<label>Medias vueltas: <input type="number" id="vlt_md"></label><br>
+			<input type="button" id="btn_calc_capes" value="calcular">
+		</form>
+
+		<label>Numero de capes mantega: <a id="rslt_manteg">0 </a> </label><br>
+		<label>Numero de capes massa: <a id="rslt_massa"> 0 </a> </label><br>
+		<label>Numero de capes totals: <a id="rslt_total"> 0 </a> </label><br>
+
+
+		<script>
+
+			let id_capes = ["vlt_md", "vlt_smp", "vlt_dbl"];
+			let id_resultats = ["rslt_manteg", "rslt_massa", "rslt_total"];
+			let in_capas = [0, 0, 0]; // medias simples, dobles
+			let out_capas = [0, 0, 0]; // mantega, massa, totals
+
+			let boto_calc_capes = document.getElementById('btn_calc_capes');
+			boto_calc_capes.addEventListener('click', () => {
+				event.preventDefault();
+
+				in_capas = guardar_inputs(id_capes);
+
+				print_result_capes(id_resultats, calcular_capes(in_capas));
+			})
+
+			function guardar_inputs(id) {
+				let in_capas = [0, 0, 0];
+
+				for (let i = 0; i < 3; i++) {
+					in_capas[i] = document.getElementById(id[i]).value;
+				}
+
+				return in_capas;
+			}
+
+			function calcular_capes(n_voltes) {
+				let totals = 3; // el mínim són 3, 1 de mantega + 2 masa
+				let n_capes = [0, 0, 0];
+
+				for (let i = 0; i < 3; i++) // 3 = med. vlta, vlta. simp., vlta. dob.
+				{
+					for (let j = 0; j < n_voltes[i]; j++) {
+						totals = (totals * (i + 2)) - (1 + i);
+					}
+				}
+
+				let disc = 2;
+				for (let i = 0; i < 3; i++) { // mantega( = totals-2), massa( = totals-1), totals
+					n_capes[i] = (totals - disc);
+					disc--;
+				}
+				return n_capes;
+			}
+
+			function print_result_capes(id, valors) {
+				for (let i = 0; i < 3; i++) {
+					document.getElementById(id[i]).innerText = valors[i];
+				}
+			}
+
+		</script>
+	</div>
 
 
 	<script> // S'executa un cop en l'inici, per amagar tots els textos, excepte el primer
 		document.getElementById('div_maridaje').hidden = true;
-		document.getElementById('div_temporada').hidden = false; // treballant en aquest
+		document.getElementById('div_temporada').hidden = true;
 		document.getElementById('div_fact_conv').hidden = true;
-		document.getElementById('div_calc').hidden = true;
+		document.getElementById('div_calc').hidden = false; // treballant en aquest
 	</script>
 
 	<script> // Apuntem als div que volem mostrar / amagar
