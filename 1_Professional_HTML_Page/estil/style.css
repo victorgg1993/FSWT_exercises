@@ -24,36 +24,38 @@
 
 /* Bloc taula de la temporada de la fruita */
 
-.taula_fruita {
+.taula {
   width: 100%;
 }
 
-.taula_fruita tr:hover {
+.tr_taules:hover {
   background-color:  rgb(134, 174, 211);
   color: white;
   font-size: 19px;
 }
 
-.taula_fruita tr {
+tr {
   display: flex;
   align-items: center;
   border-bottom: 0.1em solid #7a7a7a;
 }
 
-.taula_fruita th {
+ th {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   height: 35px;
   flex: 1;
   background-color: rgb(87, 106, 161);
   color: white;
 }
 
-.taula_fruita td {
+ td {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   height: 25px;
   flex: 1;
 }
