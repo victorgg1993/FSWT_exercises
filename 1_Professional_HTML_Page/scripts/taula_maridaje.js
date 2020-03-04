@@ -1,5 +1,5 @@
 
-let titols = ['Albaricoque', 'Arándano', 'Calabaza', 'Cereza', 'Ciruela', 'Ciruela damascena',
+let titols_maridaje = ['Albaricoque', 'Arándano', 'Calabaza', 'Cereza', 'Ciruela', 'Ciruela damascena',
     'Ciruela Mirabel', 'Coco', 'Dátil', 'Frambuesa', 'Fresa', 'Fruta pasión', 'Grosella negra',
     'Grosella roja', 'Higo', 'Kiwi', 'Kumqat', 'Lichi',];
 
