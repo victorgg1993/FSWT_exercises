@@ -1,7 +1,7 @@
 function crear_taula(id, clase, qui_penja) {
     let taula = document.createElement("table");
     taula.setAttribute("id", id);
-    taula.setAttribute("classe", clase);
+    taula.setAttribute("class", clase);
     document.getElementById(qui_penja).appendChild(taula);
 }
 
