@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="estil/style.css">
+	<script type="text/javascript" src="scripts/api.js"></script>
 	<title>Conversiones cocina</title>
 </head>
 
@@ -23,9 +24,9 @@
 		<script type="text/javascript" src="scripts/taula_maridaje.js"></script>
 
 		<script>
-			crear_taula_maridaje();
-			pintar_titols_maridaje();
-			pintar_files_maridaje();
+			crear_taula("taula_maridaje", "taula", "div_maridaje"); // id, taula, qui penja
+			pintar_titols("titols_maridaje", "taula_maridaje", titols); // id, qui penja, array titols
+			pintar_files("tr_taules", "taula_maridaje", dades_maridaje); // clase, qui penja, array dades 2D
 		</script>
 	</div>
 
@@ -401,6 +402,10 @@
 		})
 
 	</script>
+
+
+
+
 </body>
 
 </html>
