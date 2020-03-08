@@ -26,18 +26,28 @@ function guardar_inputs(id) {
 function calcular_capes(n_voltes) {
     let totals = 3; // el mínim són 3, 1 de mantega + 2 masa
     let n_capes = [0, 0, 0];
+    let comptador = 0;
 
-    for (let i = 0; i < 3; i++) // 3 = med. vlta, vlta. simp., vlta. dob.
+    for (let i = 0; i < n_voltes.length; i++) // mirar si estan els 3 buits
     {
-        for (let j = 0; j < n_voltes[i]; j++) {
-            totals = (totals * (i + 2)) - (1 + i);
+        if (n_voltes[i] == 0) {
+            comptador++;
         }
     }
 
-    let disc = 2;
-    for (let i = 0; i < 3; i++) { // mantega( = totals-2), massa( = totals-1), totals
-        n_capes[i] = (totals - disc);
-        disc--;
+    if (comptador != 3) {
+        for (let i = 0; i < 3; i++) // 3 = med. vlta, vlta. simp., vlta. dob.
+        {
+            for (let j = 0; j < n_voltes[i]; j++) {
+                totals = (totals * (i + 2)) - (1 + i);
+            }
+        }
+
+        let disc = 2;
+        for (let i = 0; i < 3; i++) { // mantega( = totals-2), massa( = totals-1), totals
+            n_capes[i] = (totals - disc);
+            disc--;
+        }
     }
     return n_capes;
 }
