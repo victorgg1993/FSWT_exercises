@@ -40,6 +40,3 @@ let dades_fact_conv = [
         ['Sal marina fina', '5 g', '15 g' ,''],
     ],
 ];
-
-
-
