@@ -5,12 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="estil/style.css">
 	<script type="text/javascript" src="scripts/api.js"></script>
+	<script type="text/javascript" src="scripts/taula_maridaje.js"></script>
+	<script type="text/javascript" src="scripts/taula_temporada_fruta.js"></script>
+	<script type="text/javascript" src="scripts/taula_fact_conv.js"></script>
 	<title>Conversiones cocina</title>
 </head>
 
 <body>
 	<nav>
-		<!--Barra superior de navegació-->
 		<ul class="navigation-bar">
 			<li id="maridaje"><a>Maridaje</a></li>
 			<li id="temporada"><a>Temporada de la fruta</a></li>
@@ -21,8 +23,6 @@
 
 	<!-- Aqui estan tots els textos, de forma predeterminada estan apagats-->
 	<div id="div_maridaje">
-		<script type="text/javascript" src="scripts/taula_maridaje.js"></script>
-
 		<script>
 			crear_taula("taula_maridaje", "taula", "div_maridaje"); // id, taula, qui penja
 			pintar_titols("titols_maridaje", "taula_maridaje", titols_maridaje); // id, qui penja, array titols
@@ -31,8 +31,6 @@
 	</div>
 
 	<div id="div_temporada">
-		<script type="text/javascript" src="scripts/taula_temporada_fruta.js"></script>
-
 		<script>
 			crear_taula("taula_temporada", "taula", "div_temporada"); // id, taula, qui penja
 			pintar_titols("titols_temporada", "taula_temporada", titols_temporada); // id, qui penja, array titols
@@ -41,33 +39,25 @@
 	</div>
 
 	<div id="div_fact_conv">
-		<script type="text/javascript" src="scripts/taula_fact_conv.js"></script>
+		<script>
+		// ingredientes liquidos
+			//crear_taula("tbl_fact_conv_med_liq", "taula", "div_fact_conv"); // id, taula, qui penja
+			//pintar_titols("titol_superior_conv_med_liq", "tbl_fact_conv_med_liq", titols_fact_conv[0]);
+			//pintar_titols("titols_fact_conv_med_liq", "tbl_fact_conv_med_liq", titols_fact_conv[1]); // id, qui penja, array titols
+			//pintar_files("tr_taules", "tbl_fact_conv_med_liq", dades_fact_conv[0]); // clase, qui penja, array dades 2D
 
-		<script> // ingredientes liquidos
-			crear_taula("tbl_fact_conv_med_liq", "taula", "div_fact_conv"); // id, taula, qui penja
-			pintar_titols("titol_superior_conv_med_liq", "tbl_fact_conv_med_liq", titols_fact_conv[0]);
-			pintar_titols("titols_tbl_fact_conv_med_liq", "tbl_fact_conv_med_liq", titols_fact_conv[1]); // id, qui penja, array titols
-			pintar_files("tr_taules", "tbl_fact_conv_med_liq", dades_fact_conv[0]); // clase, qui penja, array dades 2D
+		// mantequilla
+			//crear_taula("tbl_fact_conv_mantq", "taula", "div_fact_conv"); // id, taula, qui penja
+			//pintar_titols("titol_superior_conv_mantq", "tbl_fact_conv_mantq", titols_fact_conv[2]);
+			//pintar_titols("titols_tbl_fact_conv_mantq", "tbl_fact_conv_mantq", titols_fact_conv[3]); // id, qui penja, array titols
+			//pintar_files("tr_taules", "tbl_fact_conv_mantq", dades_fact_conv[1]); // clase, qui penja, array dades 2D
+
+		// solidos
+			//crear_taula("tbl_fact_conv_secos", "taula", "div_fact_conv"); // id, taula, qui penja
+			//pintar_titols("titol_superior_conv_secos", "tbl_fact_conv_secos", titols_fact_conv[4]);
+			//pintar_titols("titols_tbl_fact_conv_secos", "tbl_fact_conv_secos", titols_fact_conv[5]); // id, qui penja, array titols
+			//pintar_files("tr_taules", "tbl_fact_conv_secos", dades_fact_conv[2]); // clase, qui penja, array dades 2D
 		</script>
-		<br>
-
-		<script> // mantequilla
-			crear_taula("tbl_fact_conv_mantq", "taula", "div_fact_conv"); // id, taula, qui penja
-			pintar_titols("titol_superior_conv_mantq", "tbl_fact_conv_mantq", titols_fact_conv[2]);
-			pintar_titols("titols_tbl_fact_conv_mantq", "tbl_fact_conv_mantq", titols_fact_conv[3]); // id, qui penja, array titols
-			pintar_files("tr_taules", "tbl_fact_conv_mantq", dades_fact_conv[1]); // clase, qui penja, array dades 2D
-		</script>
-		<br>
-
-		<script> // solidos
-			crear_taula("tbl_fact_conv_secos", "taula", "div_fact_conv"); // id, taula, qui penja
-			pintar_titols("titol_superior_conv_secos", "tbl_fact_conv_secos", titols_fact_conv[4]);
-			pintar_titols("titols_tbl_fact_conv_secos", "tbl_fact_conv_secos", titols_fact_conv[5]); // id, qui penja, array titols
-			pintar_files("tr_taules", "tbl_fact_conv_secos", dades_fact_conv[2]); // clase, qui penja, array dades 2D
-		</script>
-
-		<br>
-
 	</div>
 
 	<div id="div_calc">
@@ -88,9 +78,9 @@
 	</div>
 
 	<script> // S'executa un cop en l'inici, per amagar tots els textos, excepte el primer
-		document.getElementById('div_maridaje').hidden = true;
+		document.getElementById('div_maridaje').hidden = false;
 		document.getElementById('div_temporada').hidden = true;
-		document.getElementById('div_fact_conv').hidden = false; // primer on
+		document.getElementById('div_fact_conv').hidden = true;
 		document.getElementById('div_calc').hidden = true;
 	</script>
 
