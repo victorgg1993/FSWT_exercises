@@ -41,109 +41,37 @@
 	</div>
 
 	<div id="div_fact_conv">
+		<script type="text/javascript" src="scripts/taula_fact_conv.js"></script>
 
-		<table>
-			<tr>
-				<th>Medidas líquidas
-			<tr>
-				<th>Unidad
-				<th>Cantidad
-			<tr class="tr_taules">
-				<td>1 cucharadita
-				<td>5ml
-			<tr class="tr_taules">
-				<td>1 cucharada
-				<td>15ml
-			<tr class="tr_taules">
-				<td>1/4 taza
-				<td>60ml
-			<tr class="tr_taules">
-				<td>1/3 taza
-				<td>75ml
-			<tr class="tr_taules">
-				<td>1/2 taza
-				<td>125ml
-			<tr class="tr_taules">
-				<td>1 taza
-				<td>250ml
-		</table>
-
+		<script> // ingredientes liquidos
+			crear_taula("tbl_fact_conv_med_liq", "taula", "div_fact_conv"); // id, taula, qui penja
+			pintar_titols("titol_superior_conv_med_liq", "tbl_fact_conv_med_liq", titols_fact_conv[0]);
+			pintar_titols("titols_tbl_fact_conv_med_liq", "tbl_fact_conv_med_liq", titols_fact_conv[1]); // id, qui penja, array titols
+			pintar_files("tr_taules", "tbl_fact_conv_med_liq", dades_fact_conv[0]); // clase, qui penja, array dades 2D
+		</script>
 		<br>
 
-		<table>
-			<tr>
-				<th>Equivalentes mantequilla
-			<tr>
-				<th>Unidad
-				<th>Onzas
-				<th>Gramos
-			<tr class="tr_taules">
-				<td>1 cucharadita
-				<td>0.5 oz
-				<td>15 g
-			<tr class="tr_taules">
-				<td>4 cucharaditas
-				<td>2 oz
-				<td>60 g
-			<tr class="tr_taules">
-				<td>1/4 de taza
-				<td>2 oz
-				<td>60 g
-			<tr class="tr_taules">
-				<td>8 cucharaditas
-				<td>4 oz
-				<td>115 g
-			<tr class="tr_taules">
-				<td>1/2 taza
-				<td>4 oz
-				<td>115 g
-			<tr class="tr_taules">
-				<td>1 taza
-				<td>8 oz
-				<td>230
-		</table>
-
+		<script> // mantequilla
+			crear_taula("tbl_fact_conv_mantq", "taula", "div_fact_conv"); // id, taula, qui penja
+			pintar_titols("titol_superior_conv_mantq", "tbl_fact_conv_mantq", titols_fact_conv[2]);
+			pintar_titols("titols_tbl_fact_conv_mantq", "tbl_fact_conv_mantq", titols_fact_conv[3]); // id, qui penja, array titols
+			pintar_files("tr_taules", "tbl_fact_conv_mantq", dades_fact_conv[1]); // clase, qui penja, array dades 2D
+		</script>
 		<br>
 
-		<table>
-			<tr>
-				<th>Ingredientes secos
-			<tr>
-				<th>Ingrediente
-				<th>1 cucharadita
-				<th>1 cucharada
-				<th>1 taza
-			<tr class="tr_taules">
-				<td>Harina
-				<td>3 g
-				<td>8 g
-				<td>125 g
-			<tr class="tr_taules">
-				<td>Azúcar extrafino
-				<td>4 g
-				<td>12 g
-				<td>195 g
-			<tr class="tr_taules">
-				<td>Azúcar glas
-				<td>3 g
-				<td>8 g
-				<td>130 g
-			<tr class="tr_taules">
-				<td>Levadura química
-				<td>4 g
-				<td>11 g
-			<tr class="tr_taules">
-				<td>Sal marina fina
-				<td>5 g
-				<td>15 g
-		</table>
+		<script> // solidos
+			crear_taula("tbl_fact_conv_secos", "taula", "div_fact_conv"); // id, taula, qui penja
+			pintar_titols("titol_superior_conv_secos", "tbl_fact_conv_secos", titols_fact_conv[4]);
+			pintar_titols("titols_tbl_fact_conv_secos", "tbl_fact_conv_secos", titols_fact_conv[5]); // id, qui penja, array titols
+			pintar_files("tr_taules", "tbl_fact_conv_secos", dades_fact_conv[2]); // clase, qui penja, array dades 2D
+		</script>
 
-		<br>
 		<br>
 
 	</div>
 
 	<div id="div_calc">
+		<!--Calculadora de capas de hojaldre-->
 		<p>Calculadora de capas de hojaldre</p>
 		<form action="/" method="vueltas">
 			<label>Vueltas dobles: <input type="number" id="vlt_dbl"></label><br>
@@ -156,128 +84,17 @@
 		<label>Numero de capes massa: <a id="rslt_massa"> 0 </a> </label><br>
 		<label>Numero de capes totals: <a id="rslt_total"> 0 </a> </label><br>
 
-
-		<script>
-
-			let id_capes = ["vlt_md", "vlt_smp", "vlt_dbl"];
-			let id_resultats = ["rslt_manteg", "rslt_massa", "rslt_total"];
-			let in_capas = [0, 0, 0]; // medias simples, dobles
-			let out_capas = [0, 0, 0]; // mantega, massa, totals
-
-			let boto_calc_capes = document.getElementById('btn_calc_capes');
-			boto_calc_capes.addEventListener('click', () => {
-				event.preventDefault();
-
-				in_capas = guardar_inputs(id_capes);
-
-				print_result_capes(id_resultats, calcular_capes(in_capas));
-			})
-
-			function guardar_inputs(id) {
-				let in_capas = [0, 0, 0];
-
-				for (let i = 0; i < 3; i++) {
-					in_capas[i] = document.getElementById(id[i]).value;
-				}
-
-				return in_capas;
-			}
-
-			function calcular_capes(n_voltes) {
-				let totals = 3; // el mínim són 3, 1 de mantega + 2 masa
-				let n_capes = [0, 0, 0];
-
-				for (let i = 0; i < 3; i++) // 3 = med. vlta, vlta. simp., vlta. dob.
-				{
-					for (let j = 0; j < n_voltes[i]; j++) {
-						totals = (totals * (i + 2)) - (1 + i);
-					}
-				}
-
-				let disc = 2;
-				for (let i = 0; i < 3; i++) { // mantega( = totals-2), massa( = totals-1), totals
-					n_capes[i] = (totals - disc);
-					disc--;
-				}
-				return n_capes;
-			}
-
-			function print_result_capes(id, valors) {
-				for (let i = 0; i < 3; i++) {
-					document.getElementById(id[i]).innerText = valors[i];
-				}
-			}
-
-		</script>
+		<script type="text/javascript" src="scripts/calculadora_hojaldre.js"></script>
 	</div>
-
 
 	<script> // S'executa un cop en l'inici, per amagar tots els textos, excepte el primer
 		document.getElementById('div_maridaje').hidden = true;
-		document.getElementById('div_temporada').hidden = false;
-		document.getElementById('div_fact_conv').hidden = true;
+		document.getElementById('div_temporada').hidden = true;
+		document.getElementById('div_fact_conv').hidden = false; // primer on
 		document.getElementById('div_calc').hidden = true;
 	</script>
 
-	<script> // Apuntem als div que volem mostrar / amagar
-		let d_mar = document.getElementById('div_maridaje');
-		let d_temp = document.getElementById('div_temporada');
-		let d_fact_conv = document.getElementById('div_fact_conv');
-		let d_calc = document.getElementById('div_calc');
-	</script>
-
-	<script> // Handlers dels botons
-		let doc_maridaje = document.getElementById('maridaje');
-		doc_maridaje.addEventListener('click', () => {
-			event.preventDefault();
-
-			if (d_mar.hidden === true) {
-				d_mar.hidden = false;
-				d_temp.hidden = true;
-				d_fact_conv.hidden = true;
-				d_calc.hidden = true;
-			}
-		})
-
-		let doc_temporada = document.getElementById('temporada');
-		doc_temporada.addEventListener('click', () => {
-			event.preventDefault();
-
-			if (d_temp.hidden === true) {
-				d_temp.hidden = false;
-				d_mar.hidden = true;
-				d_fact_conv.hidden = true;
-				d_calc.hidden = true;
-			}
-		})
-
-		let doc_fact_conv = document.getElementById('fact_conv');
-		doc_fact_conv.addEventListener('click', () => {
-			event.preventDefault();
-
-			if (d_fact_conv.hidden === true) {
-				d_fact_conv.hidden = false;
-				d_temp.hidden = true;
-				d_mar.hidden = true;
-				d_calc.hidden = true;
-			}
-		})
-
-		let doc_calculadora = document.getElementById('calc');
-		doc_calculadora.addEventListener('click', () => {
-			event.preventDefault();
-			if (d_calc.hidden === true) {
-				d_calc.hidden = false;
-				d_fact_conv.hidden = true;
-				d_temp.hidden = true;
-				d_mar.hidden = true;
-			}
-		})
-
-	</script>
-
-
-
+	<script type="text/javascript" src="scripts/handlers_botones.js"></script> <!-- Handlers dels botons -->
 
 </body>
 
