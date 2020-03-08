@@ -1,5 +1,4 @@
 /* Bloc navigation bar */
-
 .navigation-bar {
   display: flex;
   margin: 0;
@@ -23,13 +22,12 @@
 }
 
 /* Bloc taula de la temporada de la fruita */
-
 .taula {
   width: 100%;
 }
 
 .tr_taules:hover {
-  background-color:  rgb(134, 174, 211);
+  background-color: rgb(134, 174, 211);
   color: white;
   font-size: 19px;
 }
@@ -40,7 +38,7 @@ tr {
   border: 0.1em solid #7a7a7a;
 }
 
- th {
+th {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,7 +50,7 @@ tr {
   padding: 0.2em;
 }
 
- td {
+td {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,4 +58,13 @@ tr {
   height: 25px;
   flex: 1;
   padding: 0.2em 0.4em;
+}
+
+/*Bloc factors de conversió*/
+#div_fact_conv {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 650px;
+  align-content: space-between;
 }
