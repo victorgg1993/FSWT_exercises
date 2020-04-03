@@ -1,11 +1,13 @@
 {
   "name": "2_CardGame",
+  "type": "module",
   "version": "0.0.1",
   "description": "Modelo juego UNO",
   "main": "main.js",
   "dependencies": {
     "esm": "^3.2.25",
     "express": "^4.17.1",
+    "readline-sync": "^1.4.10",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },
