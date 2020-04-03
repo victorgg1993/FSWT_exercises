@@ -1,9 +1,10 @@
-import Cartes from './src/cartes.mjs';
-console.log('Debug');
+import UNO from './src/model/uno.mjs';
 
-const a = new Cartes('blau');
+let joc_uno = new UNO();
 
-a.set_color('vermell');
-console.log("Nou color: ", a.get_color());
+while (joc_uno.semafor) {
+    joc_uno.gestio();
+}
 
 
+// to-do: dóna problemes al anunciar l'uno
