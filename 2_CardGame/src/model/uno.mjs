@@ -36,7 +36,6 @@ export default class UNO {
             case logic.FINAL_PARTIDA:
                 msg.pintar_resultats(logic.jugadors);
                 this.semafor = false;
-                //demanar una altre partida
                 break;
         }
     }
