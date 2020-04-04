@@ -87,12 +87,13 @@ export default class Logica {
 
         if (this.algun_usuari_te_0_cartes(this.jugadors)) {
 
-            if (jugador.ha_dit_uno) { // ha dit uno?
+            if (jugador.ha_dit_uno) {
                 this.estat_joc = this.FINAL_PARTIDA;
-                return 0;
             }
-            msg.pintar_missatge_error(`el jugador ${jugador.nom} no ha dit UNO, +2 cartes`, N_SALTS);
-            jugador.guardar_carta(2); // ens menjem 2
+            else {
+                msg.pintar_missatge_error(`el jugador ${jugador.nom} no ha dit UNO, +2 cartes`, N_SALTS);
+                jugador.guardar_carta(2); // ens menjem 2
+            }
         }
     }
     // case PARTIDA_INICIADA_PRINT_CARTES_JUGADOR
@@ -117,9 +118,9 @@ export default class Logica {
                 msg.pintar_carta_monto(this.cartes);
             }
         }
-        else{
+        else {
             this.logica_ordre(ordre);
-        }        
+        }
     }
 
     // Funcions "privades". Altres funcions
@@ -198,7 +199,13 @@ export default class Logica {
     demanar_color() {
         // to-do: sanitize entrada
         let _color = llegir_linia.question(tiza.greenBright("Quin color vols? ('blau', 'vermell', 'verd','groc'): "));
-        this.cartes.monto_canvi_color(_color);
+
+        for (let i = 0; i < this.cartes.Colors.length; i++) {
+            if (this.cartes.Colors[i] == _color) {
+                return _color;
+            }
+        }
+        return 0;
     }
     algun_usuari_te_0_cartes(jugador) {
         for (let i = 0; i < jugador.length; i++) {
@@ -230,12 +237,17 @@ export default class Logica {
     }
     carta_robar_4(jugador, carta_a_deixar) {
 
-        jugador.deixar_carta(carta_a_deixar);
-        this.demanar_color();
-        jugador = this.saltar_proxim_jugador();
-        jugador.guardar_carta(4); // ens menjem 4
-        this.saltar_proxim_jugador(); // ens saltem el jugador
-        msg.pintar_salt_linia(N_SALTS);
+        let _color = this.demanar_color();
+        if (_color != 0) {
+            jugador.deixar_carta(carta_a_deixar);
+            this.cartes.monto_canvi_color(_color); // canviar color monto
+            jugador = this.saltar_proxim_jugador(); // apuntem nou jugador
+            jugador.guardar_carta(4); // es menja 4
+            this.saltar_proxim_jugador(); // ens saltem el jugador ( perd la ronda )
+            msg.pintar_salt_linia(N_SALTS);
+        } else {
+            msg.pintar_missatge_error("error carta +4, color no existeix", N_SALTS);
+        }
     }
     carta_no_torn(carta_a_deixar) {
         let jugador = this.jugadors[this.torn_partida];
@@ -258,10 +270,17 @@ export default class Logica {
         msg.pintar_missatge_error("carta no permesa", N_SALTS); // else
     }
     carta_demanar_color(jugador, carta_a_deixar) {
-        jugador.deixar_carta(carta_a_deixar);
-        this.demanar_color();
-        msg.pintar_salt_linia(N_SALTS);
-        this.saltar_proxim_jugador();
+
+        let _color = this.demanar_color();
+        if (_color != 0) {
+            jugador.deixar_carta(carta_a_deixar);
+            this.cartes.monto_canvi_color(_color); // canviar color monto
+            msg.pintar_salt_linia(N_SALTS);
+            this.saltar_proxim_jugador();
+        }
+        else {
+            msg.pintar_missatge_error("error comodín color, color no existeix", N_SALTS);
+        }
     }
 
     // Logica ordres
