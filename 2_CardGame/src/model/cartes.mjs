@@ -1,14 +1,16 @@
 // Globals
-const Colors = [
-    'blau',
-    'vermell',
-    'verd',
-    'groc',
-];
+
 let mazo_cartes = []; // array de les cartes actuals del mazo
 let monto = []; // monto on es van apilant les cartes
 
 export default class _Cartes {
+
+    Colors = [
+        'blau',
+        'vermell',
+        'verd',
+        'groc',
+    ];
 
     constructor() {
     }
@@ -31,7 +33,7 @@ export default class _Cartes {
                 if (_n_colors_carta[i] > 0) { // amb color
 
                     for (let k = 0; k < 4; k++) {
-                        mazo_cartes.push({ 'id': id, 'valor': _arr_valor_carta[i], 'color': `${Colors[k]}` });
+                        mazo_cartes.push({ 'id': id, 'valor': _arr_valor_carta[i], 'color': `${this.Colors[k]}` });
                         id++;
                     }
                 }
