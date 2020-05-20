@@ -1,18 +1,17 @@
 import React from 'react';
 import '../css/index.css';
 import logo_principal from '../img/logo.png';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
 
 function Inici() {
 
-  let ruta_plats = "/llistat_plats.html";
-
-  function handlerBotoInici()
-  {
-    window.location.href =ruta_plats;
-  }
+  let ruta_plats = "/llistat_plats";
 
   return (
-    <img onClick={handlerBotoInici} src={logo_principal} alt='Fes click en la imatge per anar al llistat de productes' />
+    <Link to={ruta_plats}>
+      <img src={logo_principal} alt='Click per anar als plats' />
+    </Link>
   );
 }
 
