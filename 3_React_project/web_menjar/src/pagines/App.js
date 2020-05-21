@@ -8,13 +8,11 @@ function App() {
     return (
 
         <Router>
-            <div className="App">
-                <Switch>
-                    <Inici path="/" exact component={Inici} />
-                    <Llistat_plats path="/llistat_plats" exact component={Llistat_plats} />
-                    <Plat path="/Plat" exact component={Plat} />
-                </Switch>
-            </div>
+            <Switch>
+                <Inici path="/" exact component={Inici} />
+                <Llistat_plats path="/llistat_plats" exact component={Llistat_plats} />
+                <Plat path="/Plat" exact component={Plat} />
+            </Switch>
         </Router>
     );
 }
