@@ -1,0 +1,213 @@
+{
+    "aliments": [
+        {
+            "nom": "Agua",
+            "comentarios": "",
+            "macros": {
+                "kcal": 0,
+                "agua": 0,
+                "hidratos de carbono": 0,
+                "proteinas": 0,
+                "grasas": 0,
+                "ceniza": 0,
+                "fibra": 0,
+                "proporciones": "cantidad por cada 100gr de alimento"
+            },
+            "azucares": {
+                "total": 0,
+                "sacarosa": 0,
+                "glucosa": 0,
+                "fructosa": 0,
+                "lactosa": 0,
+                "maltosa": 0,
+                "galactosa": 0,
+                "proporciones": "cantidad por cada 100gr de alimento"
+            },
+            "vitaminas": {
+                "c": 0,
+                "b1": 0,
+                "b2": 0,
+                "b3": 0,
+                "b5": 0,
+                "b6": 0,
+                "b11": 0,
+                "b12": 0,
+                "colina": 0,
+                "beatina": 0,
+                "folato": 0,
+                "a": 0,
+                "e": 0,
+                "d": 0,
+                "k1": 0,
+                "k2": 0,
+                "proporciones": "mg por cada 100gr de alimento"
+            },
+            "minerales": {
+                "ca": 0,
+                "fe": 0,
+                "mg": 0,
+                "p": 0,
+                "k": 0,
+                "na": 0,
+                "zn": 0,
+                "cu": 0,
+                "mn": 0,
+                "se": 0,
+                "proporciones": "mg por cada 100gr de alimento"
+            },
+            "fluoruro": 0,
+            "aminoacidos": {
+                "triptofano": 0,
+                "treonina": 0,
+                "isoleucina": 0,
+                "leucina": 0,
+                "lisina": 0,
+                "metionina": 0,
+                "cistina": 0,
+                "fenilalanina": 0,
+                "tirosina": 0,
+                "valina": 0,
+                "arginina": 0,
+                "histidina": 0,
+                "alanina": 0,
+                "acidos": {
+                    "aspartico": 0,
+                    "glutamico": 0
+                },
+                "glicina": 0,
+                "prolina": 0,
+                "serina": 0,
+                "hidroxiprolina": 0,
+                "proporciones": "mg por cada 100gr de alimento"
+            },
+            "grasas": {
+                "saturados": 0,
+                "monoinsaturados": 0,
+                "poliinsaturados": 0,
+                "trans": 0,
+                "trans_monoeonicos": 0,
+                "omega3": 0,
+                "omega6": 0,
+                "colesterol": 0
+            }
+        },
+        {
+            "nom": "Ajo",
+            "comentarios": "",
+            "macros": {
+                "kcal": 0,
+                "agua": 0,
+                "hidratos de carbono": 0,
+                "proteinas": 0,
+                "grasas": 0,
+                "ceniza": 0,
+                "fibra": 0,
+                "proporciones": "cantidad por cada 100gr de alimento"
+            },
+            "azucares": {
+                "total": 0,
+                "sacarosa": 0,
+                "glucosa": 0,
+                "fructosa": 0,
+                "lactosa": 0,
+                "maltosa": 0,
+                "galactosa": 0,
+                "proporciones": "cantidad por cada 100gr de alimento"
+            },
+            "vitaminas": {
+                "c": 0,
+                "b1": 0,
+                "b2": 0,
+                "b3": 0,
+                "b5": 0,
+                "b6": 0,
+                "b11": 0,
+                "b12": 0,
+                "colina": 0,
+                "beatina": 0,
+                "folato": 0,
+                "a": 0,
+                "e": 0,
+                "d": 0,
+                "k1": 0,
+                "k2": 0,
+                "proporciones": "mg por cada 100gr de alimento"
+            },
+            "minerales": {
+                "ca": 0,
+                "fe": 0,
+                "mg": 0,
+                "p": 0,
+                "k": 0,
+                "na": 0,
+                "zn": 0,
+                "cu": 0,
+                "mn": 0,
+                "se": 0,
+                "proporciones": "mg por cada 100gr de alimento"
+            },
+            "fluoruro": 0,
+            "aminoacidos": {
+                "triptofano": 0,
+                "treonina": 0,
+                "isoleucina": 0,
+                "leucina": 0,
+                "lisina": 0,
+                "metionina": 0,
+                "cistina": 0,
+                "fenilalanina": 0,
+                "tirosina": 0,
+                "valina": 0,
+                "arginina": 0,
+                "histidina": 0,
+                "alanina": 0,
+                "acidos": {
+                    "aspartico": 0,
+                    "glutamico": 0
+                },
+                "glicina": 0,
+                "prolina": 0,
+                "serina": 0,
+                "hidroxiprolina": 0,
+                "proporciones": "mg por cada 100gr de alimento"
+            },
+            "grasas": {
+                "saturados": 0,
+                "monoinsaturados": 0,
+                "poliinsaturados": 0,
+                "trans": 0,
+                "trans_monoeonicos": 0,
+                "omega3": 0,
+                "omega6": 0,
+                "colesterol": 0
+            }
+        }
+    ],
+    "plats": [
+        {
+            "id": 0,
+            "nom": "Canelones de setas",
+            "comentarios": "comentarios",
+            "info": "información extra sobre alérgenos y demás",
+            "receta": "explicación receta, mover archivo externo(?)",
+            "imatge": "ruta foto imagen",
+            "temps": 1.5,
+            "alergenos": [],
+            "alergenos_extras": [],
+            "restriccions": [],
+            "ingredients_simples": [
+                {
+                    "id_ingredient": [
+                        0,
+                        1
+                    ],
+                    "pes_ingredient": [
+                        12,
+                        1200
+                    ]
+                }
+            ]
+        },
+        {}
+    ]
+}
