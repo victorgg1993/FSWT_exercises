@@ -1,0 +1,180 @@
+/*
+  foscos: #2d232e
+          #474448
+          #534b52
+
+  clars: #e0ddcf
+         #f1f0ea
+*/
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #2d232e;
+  color: #f1f0ea;
+}
+
+/*elimina linia hipervínculos*/
+
+a {
+  text-decoration: none;
+  grid-gap: 1ex;
+  margin: 0.9ex;
+  /*petit espai lateral imatge-text*/
+}
+
+div.div_plat {
+  width: 100%;
+  /*background-color: #474448;*/
+}
+
+table.table_plat {
+  width: 100%;
+  height: 100%;
+}
+
+/* ----------------------------<Imatge del plat>--*/
+
+img.img_plat {
+  display: flex;
+  width: 30ex;
+  height: 25ex;
+  border-radius: 1ex;
+  margin-left: 0.5ex;
+  margin-right: 0ex;
+  /*box-shadow: 0 4px 8px 0 rgba(136, 133, 133, 0.2), 0 6px 20px 0 rgba(136, 133, 133, 0.2);*/
+}
+
+.casella_img_plat {
+  width: 20%;
+}
+
+/* ----------------------------</Imatge del plat >--*/
+
+/* ----------------------------<Imatge alergias>--*/
+
+.imgs_alergias {
+  width: 6ex;
+  height: 6ex;
+  border-radius: 5ex;
+}
+
+/* ----------------------------</Imatge alergias >--*/
+
+/* ----------------------------<Caselles restricciones alimentaries>--*/
+
+.casella_restricc_alim_true {
+  border-radius: 1ex;
+  width: 11ex;
+  height: 3ex;
+  text-align: center;
+  background-color: rgb(39, 131, 85);
+}
+
+.casella_restricc_alim_false {
+  border-radius: 1ex;
+  width: 11ex;
+  height: 3ex;
+  text-align: center;
+  background-color: rgb(131, 39, 39);
+}
+
+.casella_alergenos {
+  text-align: end;
+  width: 25ex;
+  height: 2.5ex;
+}
+
+.espai_entre_restriccions {
+  width: 0.4ex;
+}
+
+.espai_inicial_entre_restriccions {
+  width: 0.3ex;
+}
+
+/* ----------------------------</Caselles restricciones alimentaries>--*/
+
+/* ----------------------------<Icona temps del plat>--*/
+
+img.img_temps_plat {
+  display: flex;
+  width: 3ex;
+  margin-left: 2ex;
+  margin-right: 1ex;
+}
+
+td.casella_img_temps_plat {
+  width: 2ex;
+  height: 2.5ex;
+}
+
+/* ----------------------------</Icona temps del plat>--*/
+
+/* ----------------------------<Temps del plat>--*/
+
+td.casella_temps_plat {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 24ex;
+  height: 5ex;
+}
+
+/* ----------------------------</Temps del plat>--*/
+
+/* ----------------------------<Casella titol plat>--*/
+
+.casella_titol_plat {
+  text-align: center;
+}
+
+/* ----------------------------</Casella titol plat>--*/
+
+/* ----------------------------<Pestanyes opcions plat>--*/
+
+.fila_pestanyes_opcions {
+  background-color: rgb(71, 68, 64);
+  text-align: center;
+}
+
+.fila_pestanyes_opcions_blanc {
+  background-color: rgb(71, 68, 64);
+}
+
+.fila_pestanyes_opcio_inf_nutr {
+  background-color: #474440;
+  text-align: center;
+  width: 40ex;
+}
+
+
+.fila_pestanyes_opcio_inf_nutr:hover {
+  background-color: #201f1d;
+}
+
+/* ----------------------------</Pestanyes opcions plat>--*/
+
+/* ----------------------------<Espais caselles>--*/
+
+.espai_lateral {
+  width: 1ex;
+}
+
+.espai_altura {
+  height: 1ex;
+}
+
+/* ----------------------------</Espais caselles>--*/
+
+.table_plat {
+  border-collapse: collapse;
+}
+
+.table_plat td {
+  border-style: solid;
+  border-color: red;
+  border-width: 0px;
+}

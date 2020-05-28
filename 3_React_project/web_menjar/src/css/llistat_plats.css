@@ -1,5 +1,4 @@
 /*
-
   foscos: #2d232e
           #474448
           #534b52
@@ -8,11 +7,62 @@
          #f1f0ea
 */
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #2d232e;
-  color: #e0ddcf;
+
+img.img_list_plats {
+  display: flex;
+  width: 20ex;
+  border-radius: 1ex;
+}
+
+table.table_list_plats {
+  border-collapse: separate;
+  border-spacing: 50px;
+}
+
+/* TR plats */
+
+tr.tr_list_plats {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: 0.2s;
+  width: 101ex;
+  height: 15ex;
+  /*espai entre tr*/
+}
+
+tr.tr_list_plats:hover {
+  background-color: #474448;
+  transition: 0.2s;
+  border-radius: 1ex;
+}
+
+/* TD plats */
+
+td.td_info_list_plats {
+  display: flex;
+  height: 10ex;
+  width: 40ex;
+  justify-content: initial;
+  align-items: center;
+  color: #f1f0ea;
+}
+
+td.td_info_nom_plats {
+  display: flex;
+  justify-content: initial;
+  align-items: center;
+  width: 40ex;
+  color: #f1f0ea;
+}
+
+
+.div_llistat_plats {
+  width: 100%;
+  /*background-color: #474448;*/
+}
+
+.table_list_plats{
+  display:flex;
+  justify-content: center;
 }

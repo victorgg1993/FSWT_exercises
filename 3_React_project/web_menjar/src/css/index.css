@@ -16,21 +16,21 @@ body {
   color: #e0ddcf;
 }
 
-img {
+#id_main_img {
   display: flex;
   width: 90%;
   border-radius: 50%;
   transition-duration: 0.5s;
 }
 
-img:hover {
+#id_main_img:hover {
   display: flex;
   width: 100%;
   border-radius: 50%;
   transition-duration: 0.5s;
 }
 
-a {
+a.class_main_img {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,9 +42,3 @@ main {
   justify-content: center;
   align-items: center;
 }
-
-/*
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-*/
