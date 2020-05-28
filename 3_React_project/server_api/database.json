@@ -1,213 +1,59 @@
 {
-    "aliments": [
-        {
-            "nom": "Agua",
-            "comentarios": "",
-            "macros": {
-                "kcal": 0,
-                "agua": 0,
-                "hidratos de carbono": 0,
-                "proteinas": 0,
-                "grasas": 0,
-                "ceniza": 0,
-                "fibra": 0,
-                "proporciones": "cantidad por cada 100gr de alimento"
-            },
-            "azucares": {
-                "total": 0,
-                "sacarosa": 0,
-                "glucosa": 0,
-                "fructosa": 0,
-                "lactosa": 0,
-                "maltosa": 0,
-                "galactosa": 0,
-                "proporciones": "cantidad por cada 100gr de alimento"
-            },
-            "vitaminas": {
-                "c": 0,
-                "b1": 0,
-                "b2": 0,
-                "b3": 0,
-                "b5": 0,
-                "b6": 0,
-                "b11": 0,
-                "b12": 0,
-                "colina": 0,
-                "beatina": 0,
-                "folato": 0,
-                "a": 0,
-                "e": 0,
-                "d": 0,
-                "k1": 0,
-                "k2": 0,
-                "proporciones": "mg por cada 100gr de alimento"
-            },
-            "minerales": {
-                "ca": 0,
-                "fe": 0,
-                "mg": 0,
-                "p": 0,
-                "k": 0,
-                "na": 0,
-                "zn": 0,
-                "cu": 0,
-                "mn": 0,
-                "se": 0,
-                "proporciones": "mg por cada 100gr de alimento"
-            },
-            "fluoruro": 0,
-            "aminoacidos": {
-                "triptofano": 0,
-                "treonina": 0,
-                "isoleucina": 0,
-                "leucina": 0,
-                "lisina": 0,
-                "metionina": 0,
-                "cistina": 0,
-                "fenilalanina": 0,
-                "tirosina": 0,
-                "valina": 0,
-                "arginina": 0,
-                "histidina": 0,
-                "alanina": 0,
-                "acidos": {
-                    "aspartico": 0,
-                    "glutamico": 0
-                },
-                "glicina": 0,
-                "prolina": 0,
-                "serina": 0,
-                "hidroxiprolina": 0,
-                "proporciones": "mg por cada 100gr de alimento"
-            },
-            "grasas": {
-                "saturados": 0,
-                "monoinsaturados": 0,
-                "poliinsaturados": 0,
-                "trans": 0,
-                "trans_monoeonicos": 0,
-                "omega3": 0,
-                "omega6": 0,
-                "colesterol": 0
-            }
-        },
-        {
-            "nom": "Ajo",
-            "comentarios": "",
-            "macros": {
-                "kcal": 0,
-                "agua": 0,
-                "hidratos de carbono": 0,
-                "proteinas": 0,
-                "grasas": 0,
-                "ceniza": 0,
-                "fibra": 0,
-                "proporciones": "cantidad por cada 100gr de alimento"
-            },
-            "azucares": {
-                "total": 0,
-                "sacarosa": 0,
-                "glucosa": 0,
-                "fructosa": 0,
-                "lactosa": 0,
-                "maltosa": 0,
-                "galactosa": 0,
-                "proporciones": "cantidad por cada 100gr de alimento"
-            },
-            "vitaminas": {
-                "c": 0,
-                "b1": 0,
-                "b2": 0,
-                "b3": 0,
-                "b5": 0,
-                "b6": 0,
-                "b11": 0,
-                "b12": 0,
-                "colina": 0,
-                "beatina": 0,
-                "folato": 0,
-                "a": 0,
-                "e": 0,
-                "d": 0,
-                "k1": 0,
-                "k2": 0,
-                "proporciones": "mg por cada 100gr de alimento"
-            },
-            "minerales": {
-                "ca": 0,
-                "fe": 0,
-                "mg": 0,
-                "p": 0,
-                "k": 0,
-                "na": 0,
-                "zn": 0,
-                "cu": 0,
-                "mn": 0,
-                "se": 0,
-                "proporciones": "mg por cada 100gr de alimento"
-            },
-            "fluoruro": 0,
-            "aminoacidos": {
-                "triptofano": 0,
-                "treonina": 0,
-                "isoleucina": 0,
-                "leucina": 0,
-                "lisina": 0,
-                "metionina": 0,
-                "cistina": 0,
-                "fenilalanina": 0,
-                "tirosina": 0,
-                "valina": 0,
-                "arginina": 0,
-                "histidina": 0,
-                "alanina": 0,
-                "acidos": {
-                    "aspartico": 0,
-                    "glutamico": 0
-                },
-                "glicina": 0,
-                "prolina": 0,
-                "serina": 0,
-                "hidroxiprolina": 0,
-                "proporciones": "mg por cada 100gr de alimento"
-            },
-            "grasas": {
-                "saturados": 0,
-                "monoinsaturados": 0,
-                "poliinsaturados": 0,
-                "trans": 0,
-                "trans_monoeonicos": 0,
-                "omega3": 0,
-                "omega6": 0,
-                "colesterol": 0
-            }
-        }
-    ],
     "plats": [
         {
             "id": 0,
             "nom": "Canelones de setas",
-            "comentarios": "comentarios",
-            "info": "información extra sobre alérgenos y demás",
-            "receta": "explicación receta, mover archivo externo(?)",
-            "imatge": "ruta foto imagen",
+            "info": "Deliciosa receta de canelones de setas",
+            "comentarios": "Esta receta puede ser kosher si se le cambia la sal normal por sal kosher. </br>También podría ser vegana si se le cambiase la leche por algún substituto.",
+            "receta": " <div> <h2>Ingredientes de la receta de Canelones de setas ( 4 personas ):</h2><ul><li>12 placas de canelón</li><li>300 gr. de setas</li><li>80 gr. de queso</li><li>1 cebolleta</li><li>1 pimiento verde</li><li>2 dientes de ajo</li><li>1 vaso de salsa de tomate</li><li>3 cucharadas de harina</li> <li>1/2 l. de leche</li> <li>Agua</li> <li>Aceite de oliva</li> <li>Sal</li> <li>Pimienta negra</li> <li>Perejil (para decorar)</li> </ul> <h2>Elaboración de la receta de Canelones de setas:</h2> <p>Pon las láminas de pasta, de una en una, en una cazuela con agua hirviendo y sal. Deja cocer (el tiempo que ponga en la caja). Escurre y deja enfriar cubiertos con un paño húmedo. Reserva.</p> <p>En un puchero con un chorrito de aceite, pon la harina. Cocínala, a fuego medio, y remueve con una varilla, para que no sepa a crudo. Vierte la leche, poco a poco y sin dejar de remover con la varilla, hasta conseguir la cantidad y el espesor de bechamel deseados. Pon a punto de sal. Reserva.</p> <p>Pela y pica los dos dientes de ajo y dóralos en una sartén con un chorrito de aceite. Pica fino también el pimiento verde y la cebolleta y añade. Deja pochar.<p><strong>Limpia bien las setas, pícalas y saltéalas en una sartén</strong> con un chorrito de aceite. Sazona. Escurre el agua que sueltan y agrégalas a la sartén. Añade un poco de la bechamel, mezcla y deja atemperar el relleno para los canelones.</p> <p>Pon una cucharada del relleno en cada lámina de canelón, enrolla y ponlos en una bandeja para horno. Añade salsa de tomate por encima de los canelones y cubre con bechamel al gusto. Pon unas láminas de queso por encima y hornea a 220ºC (con el horno precalentado), durante 4-6 minutos.</p> <p>Sirve 3 canelones por ración y decora con una hojita de perejil.</p> <h2>Consejo</h2> <p>Esta receta contiene un alto valor nutricional. Nuestra nutricionista lo recomienda especialmente a estudiantes universitarios que están en período de exámenes por la presencia de proteínas de origen animal. Éstas son las que mayor valor biológico tienen para reponer las células lesionadas por el desgaste derivado del esfuerzo intelectual y por el estrés de los exámenes.</p> <p>Este plato aporta hidratos de carbono, que ofrecen al estudiante el único carburante que precisa el cerebro para cumplir con sus funciones intelectuales.</p> <p>Estos hidratos de carbono, además, mejorarán el ánimo del estudiante ayudándole a combatir mejor el estrés. </p> <p>Esta cena se completará nutricionalmente con una ensalada verde con kiwi y nueces.</p> <p>Y un consejo más: por supuesto no hay que saltarse ninguna comida, respetando la presencia de todos los grupos de alimentos en la dieta.</p></div>",
+            "imatge": "https://elpetitchef.com/Images/257/presentacion.jpg",
+            "altImg": "foto canelones con setas",
             "temps": 1.5,
-            "alergenos": [],
-            "alergenos_extras": [],
-            "restriccions": [],
-            "ingredients_simples": [
-                {
-                    "id_ingredient": [
-                        0,
-                        1
-                    ],
-                    "pes_ingredient": [
-                        12,
-                        1200
-                    ]
-                }
-            ]
+            "halal": true,
+            "kosher": true,
+            "vegano": false,
+            "vegetariano": true,
+            "altramuces": false,
+            "apio": false,
+            "cacahuete": false,
+            "crustaceos": false,
+            "frutos_cascara": false,
+            "gluten": true,
+            "huevos": false,
+            "lacteos": true,
+            "moluscos": false,
+            "mostaza": false,
+            "pescado": false,
+            "sesamo": false,
+            "soja": false,
+            "sulfitos": true
         },
-        {}
+        {
+            "id": 1,
+            "nom": "Naan (pan indio)",
+            "comentarios": "La mantequilla original es mantequilla Ghee, si no se dispone de</br>dicha mantequilla, usar una mantequilla normal.",
+            "info": "Receta hecha con pan indio (Naan) acompañado de hummus y guacamole",
+            "receta": "<div><h3><span></span>Ingredientes<span></span></h3><ul><li> 600g de harina de trigo </li><li> 200 ml de agua tibia </li><li> 200 ml leche </li><li> 1 cucharadita miel </li><li> 1 cucharadita sal </li><li> 10 g de levadura fresca o 5g de levadura de panadero </li><li> 1 yogur griego o natural </li><li> 25 g de aceite de oliva </li><li> Ajo, cilantro y mantequilla fundida (Para pintar)</li></ul><h3>Paso a paso</h3><ul><li>Disuelve la levadura junto con el agua tibia la leche tibia y la miel.</li><li>Deja reposar en un espacio cálido 15 minutos. Pasado el tiempo debe verse espumoso. Si no es así, deberás repetir el proceso.</li><li>Después integra el aceite y el yogurt. Mezcla y disuelve.</li><li>Añade la harina junto con la sal. Mezcla.</li><li>Espolvorea la encimera limpia con harina, y vuelca la masa sobre ella.</li><li>Amasa durante 10 minutos.</li><li>Pasado el tiempo, engrasa un bol con aceite, y pon la masa dentro. Ponle un poco de aceite a la superficie de la masa. Tápala con un paño limpio y deja reposar en un lugar cálido durante 1 hora o 1 1/2 hora.</li><li>Cuando haya levado, ponla de nuevo sobre la encimera con harina.</li><li>Córtala en 8 partes iguales y hazlas bolitas.</li><li>Con ayuda de un rodillo, estira las bolitas. Procura no dejarlas demasiado finas.</li><li>Pon una sartén a fuego medio, úntala con un poco de mantequilla y tuesta los panes por un lado y píntalos con aceite. Deben salir burbujas, dale tiempo de que se inflen y dales la vuelta. No los tuestes demasiado para que no queden muy resecos.</li><li>Pica 2 dientes de ajo y cilantro o machácalos en un mortero. Ponle aceite de oliva o mantequilla fundida y pinta tus tanes con la mezcla de estos 3 ingredientes.</li></ul></div>",
+            "imatge": "https://www.budgetbytes.com/wp-content/uploads/2010/09/Homemade-Naan-stack-1.jpg",
+            "temps": 1.5,
+            "halal": true,
+            "kosher": true,
+            "vegano": false,
+            "vegetariano": false,
+            "altramuces": false,
+            "apio": false,
+            "cacahuete": false,
+            "crustaceos": false,
+            "frutos_cascara": false,
+            "gluten": true,
+            "huevos": false,
+            "lacteos": true,
+            "moluscos": false,
+            "mostaza": false,
+            "pescado": false,
+            "sesamo": false,
+            "soja": false,
+            "sulfitos": false
+        }
     ]
 }
