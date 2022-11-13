@@ -9,7 +9,7 @@
     "express": "^4.17.1",
     "readline-sync": "^1.4.10",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.12"
   },
   "devDependencies": {},
   "scripts": {
